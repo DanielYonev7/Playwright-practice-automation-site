@@ -6,3 +6,5 @@ export const test = base.extend({
         await use (new Application(page))
     }
 })
+
+export {expect} from '@playwright/test'
