@@ -49,10 +49,10 @@ test.describe("Slider", ()=>{
             while(true){
 
                 await page.keyboard.press("ArrowLeft")
-                    const value_of_slider = Number(await page.locator(app.sliderPage.slider_value).innerText())
-                    current_value = value_of_slider;
+                const value_of_slider = Number(await page.locator(app.sliderPage.slider_value).innerText())
+                current_value = value_of_slider;
 
-                    if(current_value === 0) break
+                if(current_value === 0) break
             }
 
         await page.keyboard.press("ArrowLeft");
