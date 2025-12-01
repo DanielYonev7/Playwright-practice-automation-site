@@ -2,6 +2,7 @@ import { FormFieldsPage } from "../POM/formFieldsPage";
 import { JavaScriptDelays } from "../POM/javaScriptDelaysPage";
 import { LandingPage } from "../POM/landingPage";
 import {PopUpsPage} from "../POM/popups"
+import { SliderPage } from "../POM/sliderPage";
 
     export class Application {
 
@@ -11,5 +12,6 @@ import {PopUpsPage} from "../POM/popups"
             this.javaScriptDelaysPage = new JavaScriptDelays(this.page);
             this.formFieldsPage = new FormFieldsPage(this.page);
             this.popUpsPage = new PopUpsPage(this.page);
+            this.sliderPage = new SliderPage(this.page);
         }
     }   
