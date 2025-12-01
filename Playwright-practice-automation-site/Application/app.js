@@ -1,11 +1,15 @@
+import { FormFieldsPage } from "../POM/formFieldsPage";
 import { JavaScriptDelays } from "../POM/javaScriptDelaysPage";
 import { LandingPage } from "../POM/landingPage";
+import {PopUpsPage} from "../POM/popups"
 
     export class Application {
 
         constructor(page){
             this.page = page;
             this.landingPage = new LandingPage(this.page);
-            this.javaScriptDelaysPage = new JavaScriptDelays(this.page)
+            this.javaScriptDelaysPage = new JavaScriptDelays(this.page);
+            this.formFieldsPage = new FormFieldsPage(this.page);
+            this.popUpsPage = new PopUpsPage(this.page);
         }
     }   

@@ -8,7 +8,7 @@ test.describe("JavaScript Delays Page", ()=>{
 
     })
 
-    test("01. JavaScript Delays - Successful navigation", async({page, app})=>{
+    test("01. Successful navigation", async({page, app})=>{
         await expect(page.locator(app.javaScriptDelaysPage.header_text)).toBeVisible()
     })
 

@@ -9,7 +9,7 @@ test.describe('Landing Page', ()=>{
 
   })
 
-  test("01. Landing page - successful navigation", async({page, app})=>{
+  test("01. Successful navigation", async({page, app})=>{
     await expect(page.locator(app.landingPage.header_text)).toBeVisible()
   })
 
