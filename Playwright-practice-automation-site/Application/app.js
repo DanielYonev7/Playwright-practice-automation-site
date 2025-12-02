@@ -1,3 +1,4 @@
+import { CalendarsPage } from "../POM/calendarsPage";
 import { FormFieldsPage } from "../POM/formFieldsPage";
 import { JavaScriptDelays } from "../POM/javaScriptDelaysPage";
 import { LandingPage } from "../POM/landingPage";
@@ -13,5 +14,6 @@ import { SliderPage } from "../POM/sliderPage";
             this.formFieldsPage = new FormFieldsPage(this.page);
             this.popUpsPage = new PopUpsPage(this.page);
             this.sliderPage = new SliderPage(this.page);
+            this.calendarPage = new CalendarsPage(this.page)
         }
     }   
