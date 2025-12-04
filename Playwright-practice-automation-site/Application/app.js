@@ -2,6 +2,7 @@ import { CalendarsPage } from "../POM/calendarsPage";
 import { FormFieldsPage } from "../POM/formFieldsPage";
 import { JavaScriptDelays } from "../POM/javaScriptDelaysPage";
 import { LandingPage } from "../POM/landingPage";
+import { ModalsPage } from "../POM/modalPage";
 import {PopUpsPage} from "../POM/popups"
 import { SliderPage } from "../POM/sliderPage";
 
@@ -15,5 +16,6 @@ import { SliderPage } from "../POM/sliderPage";
             this.popUpsPage = new PopUpsPage(this.page);
             this.sliderPage = new SliderPage(this.page);
             this.calendarPage = new CalendarsPage(this.page)
+            this.modalsPage = new ModalsPage(this.page)
         }
     }   

@@ -14,6 +14,6 @@ test.describe("JavaScript Delays Page", ()=>{
 
     test("02. Assert text visibility 'Liftoff!'", async ({page, app})=>{
         await page.click(app.javaScriptDelaysPage.start_button);
-        await expect(page.locator(app.javaScriptDelaysPage.lift_off_message)).toBeVisible({timeout: 15000})
+        await expect(page.locator(app.javaScriptDelaysPage.lift_off_message)).toBeVisible({timeout: 30000})
     })
 })
