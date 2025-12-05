@@ -5,6 +5,7 @@ import { LandingPage } from "../POM/landingPage";
 import { ModalsPage } from "../POM/modalPage";
 import {PopUpsPage} from "../POM/popups"
 import { SliderPage } from "../POM/sliderPage";
+import { TablesPage } from "../POM/tablesPage";
 
     export class Application {
 
@@ -17,5 +18,6 @@ import { SliderPage } from "../POM/sliderPage";
             this.sliderPage = new SliderPage(this.page);
             this.calendarPage = new CalendarsPage(this.page)
             this.modalsPage = new ModalsPage(this.page)
+            this.tablesPage = new TablesPage(this.page)
         }
     }   
