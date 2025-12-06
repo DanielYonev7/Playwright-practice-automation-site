@@ -1,9 +1,10 @@
 import {test, expect} from '../Application/baseFixture'
+import { decrypt } from '../config/cryptoHelper.js';
 
 test.describe("Tables", ()=>{
 
     test.beforeEach(async ({page, app})=>{
-        await page.goto(process.env.baseURL);
+        await page.goto(decrypt(process.env.baseURL));
         await page.click(`text=${app.landingPage.main_buttons.tables}`)
     })
 

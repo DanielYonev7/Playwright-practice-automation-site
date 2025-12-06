@@ -1,9 +1,10 @@
 import {test, expect} from '../Application//baseFixture'
+import { decrypt } from '../config/cryptoHelper.js';
 
 test.describe("Modals Page", ()=>{
 
     test.beforeEach(async ({page, app})=>{
-        await page.goto(process.env.baseURL);
+        await page.goto(decrypt(process.env.baseURL));
         await page.click(`text=${app.landingPage.main_buttons.modals}`)
     })
 
@@ -35,9 +36,9 @@ test.describe("Modals Page", ()=>{
 
     test("06. Successful form completion", async ({page, app})=>{
         await page.click(app.modalsPage.form_modal_button);
-        await page.fill(app.modalsPage.form_modal_name, process.env.name);
-        await page.fill(app.modalsPage.form_modal_email, process.env.email);
-        await page.fill(app.modalsPage.form_modal_message, process.env.message);
+        await page.fill(app.modalsPage.form_modal_name, decrypt(process.env.name));
+        await page.fill(app.modalsPage.form_modal_email, decrypt(process.env.email));
+        await page.fill(app.modalsPage.form_modal_message, decrypt(process.env.message));
         await page.click(app.modalsPage.form_modal_button_submit);
 
         await expect(page.locator(app.modalsPage.form_modal_successful_details)).toBeVisible()
@@ -57,7 +58,7 @@ test.describe("Modals Page", ()=>{
 
     test("09. Form Modal - Error message: invalid email", async ({page, app})=>{
         await page.click(app.modalsPage.form_modal_button);
-        await page.fill(app.modalsPage.form_modal_email, process.env.message);
+        await page.fill(app.modalsPage.form_modal_email, decrypt(process.env.message));
         await expect(page.locator(app.modalsPage.form_modal_errorMessage_invalidEmail)).toBeVisible()
     })
 

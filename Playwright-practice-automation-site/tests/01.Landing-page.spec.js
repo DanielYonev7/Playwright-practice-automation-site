@@ -1,11 +1,11 @@
 import {test, expect} from '../Application/baseFixture';
-
+import { decrypt } from '../config/cryptoHelper.js';
 
 
 test.describe('Landing Page', ()=>{
 
   test.beforeEach(async ({page})=>{
-    await page.goto(process.env.baseURL)
+    await page.goto(decrypt(process.env.baseURL))
 
   })
 

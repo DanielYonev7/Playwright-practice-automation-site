@@ -1,9 +1,10 @@
 import {test, expect} from '../Application/baseFixture'
+import { decrypt } from '../config/cryptoHelper.js';
 
 test.describe("Form Fields", ()=>{
     
     test.beforeEach(async ({page, app})=>{
-        await page.goto(process.env.baseURL);
+        await page.goto(decrypt(process.env.baseURL));
         await page.click(`text=${app.landingPage.main_buttons.form_fields}`)
     })
 
@@ -39,14 +40,14 @@ test.describe("Form Fields", ()=>{
 
         })
 
-        await page.fill(app.formFieldsPage.name_input_field, process.env.name);
-        await page.fill(app.formFieldsPage.password_input_field, process.env.password);
+        await page.fill(app.formFieldsPage.name_input_field, decrypt(process.env.name));
+        await page.fill(app.formFieldsPage.password_input_field, decrypt(process.env.password));
         await page.click(app.formFieldsPage.drink_option.water);
         await page.click(app.formFieldsPage.color_option.red);
         await page.click(app.formFieldsPage.automation_dropDown);
         await page.locator(app.formFieldsPage.automation_dropDown).selectOption('yes')
-        await page.fill(app.formFieldsPage.email_input_field, process.env.email);
-        await page.fill(app.formFieldsPage.message_input_field, process.env.message);
+        await page.fill(app.formFieldsPage.email_input_field, decrypt(process.env.email));
+        await page.fill(app.formFieldsPage.message_input_field, decrypt(process.env.message));
         await page.click(app.formFieldsPage.button_submit);
     })
 })
