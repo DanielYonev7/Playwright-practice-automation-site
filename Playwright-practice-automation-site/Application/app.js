@@ -6,6 +6,7 @@ import { ModalsPage } from "../POM/modalPage";
 import {PopUpsPage} from "../POM/popups"
 import { SliderPage } from "../POM/sliderPage";
 import { TablesPage } from "../POM/tablesPage";
+import { WindowOperationsPage } from "../POM/windowOperationsPage";
 
     export class Application {
 
@@ -16,8 +17,9 @@ import { TablesPage } from "../POM/tablesPage";
             this.formFieldsPage = new FormFieldsPage(this.page);
             this.popUpsPage = new PopUpsPage(this.page);
             this.sliderPage = new SliderPage(this.page);
-            this.calendarPage = new CalendarsPage(this.page)
-            this.modalsPage = new ModalsPage(this.page)
-            this.tablesPage = new TablesPage(this.page)
+            this.calendarPage = new CalendarsPage(this.page);
+            this.modalsPage = new ModalsPage(this.page);
+            this.tablesPage = new TablesPage(this.page);
+            this.windowOperationsPage = new WindowOperationsPage(this.page);
         }
     }   

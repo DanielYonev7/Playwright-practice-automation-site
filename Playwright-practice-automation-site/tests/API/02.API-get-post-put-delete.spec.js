@@ -43,7 +43,7 @@ test.describe("API - Get, Post, Put, Delete - Pets", ()=>{
     })
 
 
-    test.only("03. API - GET - findbystatus", async ({page})=>{
+    test("03. API - GET - findbystatus", async ({page})=>{
         const response = await page.request.get('https://petstore.swagger.io/v2/pet/findByStatus',  {
             //checking endpoing with parameter 'status' sold
             params: {status: 'sold'}
