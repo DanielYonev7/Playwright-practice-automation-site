@@ -1,5 +1,6 @@
 import { CalendarsPage } from "../POM/calendarsPage";
 import { FormFieldsPage } from "../POM/formFieldsPage";
+import { HoverPage } from "../POM/hoverPage";
 import { JavaScriptDelays } from "../POM/javaScriptDelaysPage";
 import { LandingPage } from "../POM/landingPage";
 import { ModalsPage } from "../POM/modalPage";
@@ -21,5 +22,6 @@ import { WindowOperationsPage } from "../POM/windowOperationsPage";
             this.modalsPage = new ModalsPage(this.page);
             this.tablesPage = new TablesPage(this.page);
             this.windowOperationsPage = new WindowOperationsPage(this.page);
+            this.hoverPage = new HoverPage(this.page);
         }
     }   
