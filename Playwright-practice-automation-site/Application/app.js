@@ -1,10 +1,12 @@
+import { AdsPage } from "../POM/ads";
 import { CalendarsPage } from "../POM/calendarsPage";
 import { FormFieldsPage } from "../POM/formFieldsPage";
+import { GesturesPage } from "../POM/gesturesPage";
 import { HoverPage } from "../POM/hoverPage";
 import { JavaScriptDelays } from "../POM/javaScriptDelaysPage";
 import { LandingPage } from "../POM/landingPage";
 import { ModalsPage } from "../POM/modalPage";
-import {PopUpsPage} from "../POM/popups"
+import { PopUpsPage } from "../POM/popups"
 import { SliderPage } from "../POM/sliderPage";
 import { TablesPage } from "../POM/tablesPage";
 import { WindowOperationsPage } from "../POM/windowOperationsPage";
@@ -23,5 +25,7 @@ import { WindowOperationsPage } from "../POM/windowOperationsPage";
             this.tablesPage = new TablesPage(this.page);
             this.windowOperationsPage = new WindowOperationsPage(this.page);
             this.hoverPage = new HoverPage(this.page);
+            this.adsPage = new AdsPage(this.page);
+            this.gesturesPage = new GesturesPage(this.page);
         }
     }   
